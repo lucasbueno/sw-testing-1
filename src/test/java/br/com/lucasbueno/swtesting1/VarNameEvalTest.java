@@ -19,4 +19,11 @@ public class VarNameEvalTest {
 		boolean result = varNameEval.isValid("A");
 		assertEquals(false, result);
 	}
+	
+	@Test
+	public void falseFirstNumberCase() {
+		VarNameEval varNameEval = new VarNameEval();
+		boolean result = varNameEval.isValid("1aaa");
+		assertEquals(false, result);
+	}
 }

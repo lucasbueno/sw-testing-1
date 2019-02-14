@@ -2,6 +2,5 @@
 Instalar o git
 Clonar o repositório do professor:
 	https://github.com/lucasbueno/sw-testing-1.git
-Criar todos os casos de teste
-Corrigir o programa
-Apresentar para o professor até o fim da aula de amanhã :)
+Criar todos os casos de teste para o projeto do repositório (50%)
+Corrigir o projeto do repositório (50%)
