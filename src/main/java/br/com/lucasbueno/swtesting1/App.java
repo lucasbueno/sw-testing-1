@@ -10,5 +10,7 @@ public class App {
 	public static void main(String[] args) {
 		VarNameEval eval = new VarNameEval();
 		System.out.println(eval.isValid("123asds"));
+		
+		
 	}
 }

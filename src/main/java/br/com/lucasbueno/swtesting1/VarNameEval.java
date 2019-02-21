@@ -2,7 +2,7 @@ package br.com.lucasbueno.swtesting1;
 
 public class VarNameEval {
 	public boolean isValid(String varName) {
-		
+				
 		if(!Character.isLowerCase(varName.charAt(0)))
 			return false;
 		

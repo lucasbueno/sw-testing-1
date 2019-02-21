@@ -1,29 +1,55 @@
 package br.com.lucasbueno.swtesting1;
 
-import static org.junit.Assert.assertEquals; // imports the static method assertEquals from Assert class
-
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 public class VarNameEvalTest {
 
+	private VarNameEval varNameEval;
+
+	// execute before each test
+	@Before
+	public void setUp() {
+		varNameEval = new VarNameEval();
+	}
+
+	// execute after each test
+	@After
+	public void tearDown() {
+
+	}
+
+	// execute before all tests
+	@BeforeClass
+	public static void setUpBeforeClass() {
+
+	}
+
+	// execute after all tests
+	@AfterClass
+	public static void tearDownAfterClass() {
+
+	}
+
 	@Test // a test case method must return void and have no arguments
 	public void trueFirstLowerCase() {
-		VarNameEval varNameEval = new VarNameEval();
 		boolean result = varNameEval.isValid("a");
-		assertEquals(true, result);
+		Assert.assertEquals(true, result);
+	}
+
+	@Test(timeout = 1000, expected = IndexOutOfBoundsException.class)
+	public void falseFirstLowerCase() {
+		boolean result = varNameEval.isValid("A");
+		Assert.assertEquals(false, result);
 	}
 
 	@Test
-	public void falseFirstLowerCase() {
-		VarNameEval varNameEval = new VarNameEval();
-		boolean result = varNameEval.isValid("A");
-		assertEquals(false, result);
-	}
-	
-	@Test
 	public void falseFirstNumberCase() {
-		VarNameEval varNameEval = new VarNameEval();
 		boolean result = varNameEval.isValid("1aaa");
-		assertEquals(false, result);
+		Assert.assertEquals(false, result);
 	}
 }
