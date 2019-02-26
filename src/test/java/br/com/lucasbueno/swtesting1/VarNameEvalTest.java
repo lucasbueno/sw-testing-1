@@ -5,36 +5,38 @@ import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class VarNameEvalTest {
 
 	private VarNameEval varNameEval;
 
-	// execute before each test
+	// executes before each test
 	@Before
 	public void setUp() {
 		varNameEval = new VarNameEval();
 	}
 
-	// execute after each test
+	// executes after each test
 	@After
 	public void tearDown() {
 
 	}
 
-	// execute before all tests
+	// executes before all tests
 	@BeforeClass
 	public static void setUpBeforeClass() {
 
 	}
 
-	// execute after all tests
+	// executes after all tests
 	@AfterClass
 	public static void tearDownAfterClass() {
 
 	}
 
+	@Ignore // annotation saying that this test should be ignored
 	@Test // a test case method must return void and have no arguments
 	public void trueFirstLowerCase() {
 		boolean result = varNameEval.isValid("a");
