@@ -1,6 +1,6 @@
-# Eclipse
 .settings/
-
-# Maven
+.classpath
 log/
 target/
+bin/
+
