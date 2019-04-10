@@ -20,7 +20,8 @@ public class ConstNameEvalTest {
 	public static Collection<Object[]> data() {
 		return Arrays.asList(new Object[][] {
 			{"aaa", true},
-			{"Baa", true}
+			{"Baa", true},
+			{"888", false}
 		});
 	}
 
